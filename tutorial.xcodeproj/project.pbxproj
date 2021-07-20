@@ -20,6 +20,8 @@
 		B6F04E2426A469110081F89A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F04E2326A469110081F89A /* Extensions.swift */; };
 		B6F04E2726A46B960081F89A /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F04E2626A46B960081F89A /* ScrollViewController.swift */; };
 		B6F3BBB826A69FDF0099FA67 /* CollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */; };
+		B6F3BBBB26A6B03E0099FA67 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3BBBA26A6B03D0099FA67 /* AnimationViewController.swift */; };
+		B6F3BBBE26A6B2D30099FA67 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3BBBD26A6B2D30099FA67 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B6F04E2326A469110081F89A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6F04E2626A46B960081F89A /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderView.swift; sourceTree = "<group>"; };
+		B6F3BBBA26A6B03D0099FA67 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		B6F3BBBD26A6B2D30099FA67 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 				B6E082A326A5414A0024CCA9 /* TableViewCell.swift */,
 				B6E082AA26A562940024CCA9 /* CollectionViewCell.swift */,
 				B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */,
+				B6F3BBBD26A6B2D30099FA67 /* ModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				B6F04E2626A46B960081F89A /* ScrollViewController.swift */,
 				B6E0829F26A53FFE0024CCA9 /* TableViewController.swift */,
 				B6E082A726A5623A0024CCA9 /* CollectionViewController.swift */,
+				B6F3BBBA26A6B03D0099FA67 /* AnimationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,9 +190,11 @@
 			files = (
 				B6F04E0826A43C890081F89A /* AppDelegate.swift in Sources */,
 				B6E082A026A53FFE0024CCA9 /* TableViewController.swift in Sources */,
+				B6F3BBBB26A6B03E0099FA67 /* AnimationViewController.swift in Sources */,
 				B6E082AB26A562940024CCA9 /* CollectionViewCell.swift in Sources */,
 				B6F04E0A26A43C890081F89A /* SceneDelegate.swift in Sources */,
 				B6F04E2726A46B960081F89A /* ScrollViewController.swift in Sources */,
+				B6F3BBBE26A6B2D30099FA67 /* ModalView.swift in Sources */,
 				B6E082A826A5623A0024CCA9 /* CollectionViewController.swift in Sources */,
 				B6F04E1F26A441CC0081F89A /* RootViewController.swift in Sources */,
 				B6E082A426A5414A0024CCA9 /* TableViewCell.swift in Sources */,

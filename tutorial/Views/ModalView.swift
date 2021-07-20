@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol ModalViewProtocol {
+    func modalTapped()
+}
+
 class ModalView:UIView {
     
+    var delegate:ModalViewProtocol?
 
     //MARK: properties
     lazy var closedButton:UIButton = {
@@ -20,7 +25,7 @@ class ModalView:UIView {
     
     //MARK:Selector
     @objc func closedButtonTapped() {
-            self.removeFromSuperview()
+        self.delegate?.modalTapped()
             
     }
     

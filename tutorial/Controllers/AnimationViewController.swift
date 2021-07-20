@@ -55,10 +55,22 @@ class AnimationViewController:UIViewController {
     //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.modalView.delegate = self
         configure()
     }
     
-    //MARK: configure
+    //MARK: Helper
+    func closedModal() {
+        UIView.animate(withDuration: 0.5) {
+            self.modalView.transform = CGAffineTransform(translationX: 0, y: self.view.frame.height)
+            self.blurEffectView.alpha = 0
+            
+        }completion: { (_) in
+            self.modalView.removeFromSuperview()
+        }
+    }
+    
+    
     func configure() {
         self.view.backgroundColor = .systemBackground
         
@@ -76,7 +88,13 @@ class AnimationViewController:UIViewController {
         blurEffectView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         blurEffectView.alpha = 0
     }
-    
+}
+
+extension AnimationViewController:ModalViewProtocol {
+    func modalTapped() {
+        closedModal()
+        
+    }
     
     
 }

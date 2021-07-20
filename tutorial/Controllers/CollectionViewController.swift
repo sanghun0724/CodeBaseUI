@@ -21,12 +21,46 @@ class CollectionViewController:UICollectionViewController {
         print("cllection")
         configureView()
     }
+//    override init(collectionViewLayout layout: UICollectionViewLayout) {
+//        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     
+    
+    //MARK: Selector
+    @objc func changeController() {
+        let viewControllers:[UIViewController] = self.navigationController?.viewControllers as! [UIViewController]
+        
+        for i in 0..<viewControllers.count {
+            
+            let obj = viewControllers[i]
+            
+            if (obj.isKind(of: RootViewController.self)) {
+                
+                DispatchQueue.main.async {
+                    self.navigationController?.setViewControllers(NSArray(object: obj) as! [UIViewController], animated: true)
+                    print("stack reuse")
+                    return
+                }
+                
+            }
+        }
+        let vc = RootViewController()
+        self.navigationController?.setViewControllers(NSArray(object: vc) as! [UIViewController], animated: false)
+        
+    }
     
     //MARK: Configure
     func configureView() {
         self.view.backgroundColor = .systemBackground
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.redo, target: self, action: #selector(changeController))
+        
+        
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: reusableIdentifier)
         collectionView.register(CollectionViewHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reusableHeaderIdentifier)
     }

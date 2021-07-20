@@ -92,6 +92,27 @@ class RootViewController:UIViewController {
     @objc func loginButtonTapped() {
         self.navigationController?.pushViewController(ScrollViewController(), animated: true)
     }
+    @objc func changeController() {
+        let viewControllers:[UIViewController] = self.navigationController?.viewControllers as! [UIViewController]
+        
+        for i in 0..<viewControllers.count {
+            
+            let obj = viewControllers[i]
+            
+            if (obj.isKind(of: CollectionViewController.self)) {
+                
+                DispatchQueue.main.async {
+                    self.navigationController?.setViewControllers(NSArray(object: obj) as! [UIViewController], animated: true)
+                    print("stack reuse")
+                    return
+                }
+                
+            }
+        }
+        let vc = CollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        self.navigationController?.setViewControllers(NSArray(object: vc) as! [UIViewController], animated: false)
+        
+    }
     
     
     //MARK: Helper
@@ -110,6 +131,8 @@ class RootViewController:UIViewController {
     
     func configureView() {
         view.backgroundColor = .systemBackground
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.redo, target: self, action: #selector(changeController))
         
         self.view.addSubview(mainLabel)
         mainLabel.translatesAutoresizingMaskIntoConstraints = false

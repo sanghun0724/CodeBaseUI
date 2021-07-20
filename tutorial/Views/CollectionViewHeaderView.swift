@@ -1,46 +1,41 @@
 //
-//  CollectionViewCell.swift
+//  CollectionViewHeaderView.swift
 //  tutorial
 //
-//  Created by sangheon on 2021/07/19.
+//  Created by sangheon on 2021/07/20.
 //
 
 import UIKit
 
-class CollectionViewCell:UICollectionViewCell {
+class CollectionViewHeaderView:UICollectionReusableView {
     
-    var item:String? {
-        didSet {
-            label.text = item
-        }
-    }
-    //MARK: Properties
+    //MARK: properties
+    
     lazy var label:UILabel = {
         let label = UILabel()
-  
+        label.text = "HEADER"
         return label
     }()
     
-    
-    //MARK:init
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
+        configureView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: ConfigureVIew
-    
-    func configure() {
-        backgroundColor = .systemRed
+    func configureView() {
+        backgroundColor = .systemBackground
         
         addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
+        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true 
     }
 }
+
+
+

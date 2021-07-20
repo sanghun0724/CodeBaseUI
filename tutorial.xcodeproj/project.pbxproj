@@ -19,6 +19,7 @@
 		B6F04E1F26A441CC0081F89A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F04E1E26A441CC0081F89A /* RootViewController.swift */; };
 		B6F04E2426A469110081F89A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F04E2326A469110081F89A /* Extensions.swift */; };
 		B6F04E2726A46B960081F89A /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F04E2626A46B960081F89A /* ScrollViewController.swift */; };
+		B6F3BBB826A69FDF0099FA67 /* CollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B6F04E1E26A441CC0081F89A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B6F04E2326A469110081F89A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6F04E2626A46B960081F89A /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				B6E082A326A5414A0024CCA9 /* TableViewCell.swift */,
 				B6E082AA26A562940024CCA9 /* CollectionViewCell.swift */,
+				B6F3BBB726A69FDF0099FA67 /* CollectionViewHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				B6E082A826A5623A0024CCA9 /* CollectionViewController.swift in Sources */,
 				B6F04E1F26A441CC0081F89A /* RootViewController.swift in Sources */,
 				B6E082A426A5414A0024CCA9 /* TableViewCell.swift in Sources */,
+				B6F3BBB826A69FDF0099FA67 /* CollectionViewHeaderView.swift in Sources */,
 				B6F04E2426A469110081F89A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
